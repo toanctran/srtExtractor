@@ -35,7 +35,9 @@ def has_no_text(line):
 def is_lowercase_letter_or_comma(letter):
   if letter.isalpha() and letter.lower() == letter:
     return True
-  if letter == ',':
+  if letter == ',' or letter =='"' or letter == '.':
+    return True
+  if letter.isupper():
     return True
   return False
 
